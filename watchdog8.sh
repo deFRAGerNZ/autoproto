@@ -5,7 +5,7 @@
 function launchptsminer {
 	echo "######## Starting ptsminer... ########"
 	cd /$HOME/ptsminer/src
-	./ptsminer -poolip=ptsmine.beeeeer.org -poolport=1337 -poolpassword=0 -pooluser=PZTygehAqwKXwUQyCGRYpk9z56HKAzwVmp -genproclimit=8 > ~/ptsminer.log &
+	tsocks ./ptsminer -poolip=ptsmine.beeeeer.org -poolport=1337 -poolpassword=0 -pooluser=PZTygehAqwKXwUQyCGRYpk9z56HKAzwVmp -genproclimit=8 > ~/ptsminer.log &
 }
 
 control_c()
