@@ -27,6 +27,6 @@ echo $password | sudo -S make -f makefile.unix USE_UPNP=-
 
 cd /$HOME/autoproto
 
-sudo chmod +x watchdog8.sh
+sudo chmod +x watchdog6.sh
 
 nohup ./watchdog6.sh &
