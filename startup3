@@ -29,4 +29,4 @@ cd /$HOME/autoproto
 
 sudo chmod +x watchdog3.sh
 
-nohup ./watchdog3.sh &
+./watchdog3.sh
