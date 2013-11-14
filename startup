@@ -7,7 +7,7 @@ sudo -S tsocks apt-get update
 
 # First installing important make files
 
-udo -S tsocks apt-get install -y g++ libboost-all-dev libdb++-dev build-essential libgmp-dev libssl-dev
+sudo -S tsocks apt-get install -y g++ libboost-all-dev libdb++-dev build-essential libgmp-dev libssl-dev
 
 # Now cloning the miner
 
