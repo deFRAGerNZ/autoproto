@@ -1,19 +1,17 @@
 clear
-echo "Enter your password for 'sudo' tasks that need to occur"
-read -s password
-echo -E "Than you! Continuing..."
+read -p "Enter number of threads: " threads
 
 # Updating... :-( waste of time
 
-echo $password | sudo -S tsocks apt-get update
+sudo -S tsocks apt-get update
 
 # First installing important make files
 
-echo $password | sudo -S tsocks apt-get install -y g++ libboost-all-dev libdb++-dev build-essential libgmp-dev libssl-dev
+udo -S tsocks apt-get install -y g++ libboost-all-dev libdb++-dev build-essential libgmp-dev libssl-dev
 
 # Now cloning the miner
 
-echo $password | sudo -S tsocks git clone https://github.com/deFRAGerNZ/ptsminer
+sudo -S tsocks git clone https://github.com/deFRAGerNZ/ptsminer
 
 # Changing directory to primeminer
 
@@ -21,12 +19,8 @@ cd /$HOME/ptsminer/src
 
 # compiling
 
-echo $password | sudo -S make -f makefile.unix USE_UPNP=-
+sudo -S make -f makefile.unix
 
 # starting miner :-)
 
-cd /$HOME/autoproto
-
-sudo chmod +x watchdog.sh
-
-nohup ./watchdog.sh &
+tsocks ./ptsminer PvSwtU9Ut9zJ2KxgD1a35yhyMDAbPzSxX2 $threads
